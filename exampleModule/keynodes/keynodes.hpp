@@ -27,11 +27,12 @@ public:
   SC_PROPERTY(Keynode("nrel_subdividing"), ForceCreate)
   static ScAddr nrel_subdividing;
 
-  SC_PROPERTY(Keynode("question_testing_agent"), ForceCreate)
-  static ScAddr question_testing_agent;
-
   SC_PROPERTY(Keynode("question_find_isomorphic_structures"), ForceCreate)
   static ScAddr question_find_isomorphic_structures;
+
+  SC_PROPERTY(Keynode("question_find_graph_circumference"), ForceCreate)
+  static ScAddr question_find_graph_circumference;
+};
 };
 
-} // namespace exampleModule
+// namespace exampleModule

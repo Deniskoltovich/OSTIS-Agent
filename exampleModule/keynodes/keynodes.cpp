@@ -8,9 +8,8 @@
 
 namespace exampleModule
 {
-
 ScAddr Keynodes::question_find_subdividing;
 ScAddr Keynodes::nrel_subdividing;
 ScAddr Keynodes::question_find_isomorphic_structures;
-ScAddr Keynodes::question_testing_agent;
+ScAddr Keynodes::question_find_graph_circumference;
 }

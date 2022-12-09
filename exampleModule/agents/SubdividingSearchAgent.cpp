@@ -18,6 +18,9 @@ namespace exampleModule
 
 SC_AGENT_IMPLEMENTATION(SubdividingSearchAgent)
 {
+
+  SC_LOG_ERROR("Subdividing agent started");
+
   if (!edgeAddr.IsValid())
     return SC_RESULT_ERROR;
 
@@ -30,6 +33,7 @@ SC_AGENT_IMPLEMENTATION(SubdividingSearchAgent)
   ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, param);
   ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, Keynodes::nrel_subdividing);
 
+
   ScIterator5Ptr iterator5 = IteratorUtils::getIterator5(ms_context.get(), param, Keynodes::nrel_subdividing, false);
   while (iterator5->Next())
   {
@@ -39,8 +43,9 @@ SC_AGENT_IMPLEMENTATION(SubdividingSearchAgent)
     ms_context->CreateEdge(ScType::EdgeAccessConstPosPerm, answer, iterator5->Get(3));
     GenerationUtils::addSetToOutline(ms_context.get(), sheaf, answer);
   }
-
+  
   AgentUtils::finishAgentWork(ms_context.get(), questionNode, answer);
+  SC_LOG_ERROR("Subdividing agent finished");
   return SC_RESULT_OK;
 }
 }

@@ -5,14 +5,14 @@
 #include "sc-agents-common/keynodes/coreKeynodes.hpp"
 
 #include "keynodes/keynodes.hpp"
-#include "TestAgent.generated.hpp"
+#include "CourseWorkAgent.generated.hpp"
 
 namespace exampleModule
 {
 
-class TestAgent : public ScAgent
+class CourseWorkAgent : public ScAgent
 {
-  SC_CLASS(Agent, Event(Keynodes::question_testing_agent, ScEvent::Type::AddOutputEdge))
+  SC_CLASS(Agent, Event(Keynodes::question_find_graph_circumference, ScEvent::Type::AddOutputEdge))
   SC_GENERATED_BODY()
 };
 
